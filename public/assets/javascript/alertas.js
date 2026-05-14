@@ -127,7 +127,7 @@ const meuGrafico = new Chart(rosca, {
     data: {
         labels: ['Presencial', 'Online'],  
         datasets: [{
-            label: 'Votos',
+            label: '%',
             data: [40 , 60],
             backgroundColor: [
                 'rgb(84, 145, 199)',
