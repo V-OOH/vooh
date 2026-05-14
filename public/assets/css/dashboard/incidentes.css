@@ -48,7 +48,7 @@
     margin: 1% 2% 0 0;
     border-radius: 25px;
     background-color: var(--color-white);
-    padding: 25px;
+    padding: 2%;
     height: fit-content;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.201);
     display: flex;
@@ -157,8 +157,8 @@
   }
 
   .body .content .kpis .card .ii svg {
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
   }
 
 
@@ -257,10 +257,6 @@
   }
 
 
-  .body .content .kpis .card .info .barra-preenchimento {
-    border-radius: 999px;
-    height: 100%;
-  }
 
 .Graficos{
     display: flex;
@@ -312,4 +308,17 @@
 }
 
 
+.heatMap{
+  width: 800px;
+  height: 250px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+#heatmap{
+    width: 100% !important;
+    height: 10px ;
+} 
 }
