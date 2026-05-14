@@ -64,6 +64,7 @@
     display: flex;
     width: 3vw;
     height: 3vw;
+    justify-content: center;
     align-items: center;
     border-radius: 2.5px;
     background-color: var(--color-purple);
@@ -95,7 +96,7 @@
 
   .card-title {
     color: var(--purple-main);
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     margin: 0 0 20px 0;
     font-weight: 700;
   }
@@ -206,7 +207,7 @@
 
   .main-stat {
     display: flex;
-    align-items: center;
+    align-items: column;
     gap: 15px;
   }
 
@@ -221,13 +222,8 @@
   }
 
   .stat-value {
-    font-size: 3rem;
+    font-size: 0.5rem;
     font-weight: 800;
-    color: var(--purple-main);
-  }
-
-  .color-orange {
-    color: var(--orange-accent);
   }
 
   .stat-group {
@@ -259,17 +255,13 @@
   }
 
   .min-max-info {
-    font-size: 0.8rem;
+    font-size: 0.5rem;
     color: #666;
     line-height: 1.6;
   }
 
   .card-footer {
     font-size: 0.9rem;
-  }
-
-  .footer-green {
-    color: var(--green-status);
   }
 
   .warning {
@@ -294,7 +286,7 @@
   }
 
   .stat-value {
-    font-size: 2.8rem;
+    font-size: 2.2rem;
     font-weight: 800;
     color: #111;
     display: flex;
