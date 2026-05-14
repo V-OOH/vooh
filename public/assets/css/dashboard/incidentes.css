@@ -26,7 +26,7 @@
   }
 
   .body .container {
-    padding: 2% 3.5%;
+    padding: 0.5% 3.5%;
   }
 
   .body .container .title {
@@ -261,6 +261,8 @@
 .Graficos{
     display: flex;
     margin: 0;
+    justify-content: center;
+   
 
 }
 
@@ -274,18 +276,20 @@
 
 .Graficos .container .card-grafico{
     display: flex;
+    flex: 5;
     justify-content: center;
     align-items: center;
     margin: 0px 20px 0px 0px;
 }
 
   .grafico-tendencia {
-  width: 600px;
-  height: 250px;
+  width: 40vw;
+  height: 220px;
   background: #fff;
   border-radius: 20px;
   padding: 20px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  flex: 3;
 }
 
 #graficoLinha{
@@ -294,12 +298,13 @@
 }
 
 .grafico-ranking {
-  width: 600px;
-  height: 250px;
+  width: 33vw;
+  height: 220px;
   background: #fff;
   border-radius: 20px;
   padding: 20px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  flex: 1;
 }
 
 #graficoRanking{
@@ -309,7 +314,16 @@
 
 
 .heatMap{
-  width: 800px;
+  width: 45vw;
+  height: 250px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.sugestoes{
+  width: 28vw;
   height: 250px;
   background: #fff;
   border-radius: 20px;
