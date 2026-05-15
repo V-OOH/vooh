@@ -106,6 +106,33 @@ CREATE TABLE contato (
         ON UPDATE CASCADE
 );
 
+-- Contrato
+/*
+ * Campos:
+ *
+ * - ID do contrato
+ * - Foreign Key Empresa
+ * - Periodo Inicial
+ * - Periodo Final
+ * - Meta de Disponibilidade
+ * - SLA
+ * - Ultima Atualização
+ * */
+ 
+ CREATE TABLE contrato (
+	idContrato INT PRIMARY KEY AUTO_INCREMENT,
+    fkEmpresa INT,
+    periodo_inicial DATETIME,
+    periodo_final DATETIME,
+    metaDisponibilidade DOUBLE,
+    sla DOUBLE,
+    ultima_referencia DATETIME DEFAULT CURRENT_TIMESTAMP,
+		CONSTRAINT fkcontrato_empresa
+			FOREIGN KEY (fkEmpresa)
+				REFERENCES empresa (id)
+ );
+ 
+
 -- Usuário
 /*
  * Campos:
