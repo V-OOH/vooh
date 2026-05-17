@@ -71,11 +71,14 @@ const graficobarduo = new Chart(bar_duo, {
       },
     },
 
-    scales: {
-      y: {
-        beginAtZero: true
-      }
-    }
+     scales: {
+            x: {
+                stacked: true // Habilita o empilhamento no eixo X
+            },
+            y: {
+                stacked: true // Habilita o empilhamento no eixo Y
+            }
+        }
 
   }
 });
