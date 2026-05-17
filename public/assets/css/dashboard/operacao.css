@@ -18,4 +18,29 @@
 
 /*Estilos para telas com tamanho mínimo de 1024px (>= 64rem)*/
 @media screen and (min-width: 1024px) {
+    body {
+        display: flex;
+    }
+
+    .body {
+        width: calc(100% - 8vw);
+        height: 100vh;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .body .container {
+        padding: 2% 3.5%;
+    }
+
+    .body .container .title {
+        font-weight: bold;
+        background-color: var(--color-white);
+    }
+
+    .body .container .title a {
+        text-decoration: none;
+        color: var(--color-purple);
+    }
 }
