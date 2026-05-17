@@ -1,0 +1,21 @@
+/*Estilos padrão*/
+@import url("../default.css");
+
+/*Sidebar*/
+@import url("sidebar.css");
+
+/*Estilos para telas até 480px de largura (<= 30rem)*/
+@media screen and (max-width: 480px) {
+}
+
+/*Estilos para telas com tamanho mínimo de 481px até 767px de largura (>= 30rem e <= 47.9rem)*/
+@media screen and (min-width: 481px) and (max-width: 767px) {
+}
+
+/*Estilos para telas com tamanho mínimo de 768px até 1023px de largura (>= 30rem e <= 63.9rem)*/
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+}
+
+/*Estilos para telas com tamanho mínimo de 1024px (>= 64rem)*/
+@media screen and (min-width: 1024px) {
+}

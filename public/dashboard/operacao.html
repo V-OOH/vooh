@@ -1,29 +1,15 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-br" dir="ltr">
     <head>
+        <!--HTML Meta Tags-->
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="" />
         <meta name="keywords" content="" />
         <meta name="author" content="VOOH" />
 
-        <!--LeafletJS CSS-->
-        <link
-            rel="stylesheet"
-            href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-            integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-            crossorigin=""
-        />
-
-        <!--LeafletJS JS-->
-        <script
-            src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-            crossorigin=""
-        ></script>
-
         <!--Stylesheet-->
-        <link rel="stylesheet" href="../assets/css/dashboard/incidentes.css" />
+        <link rel="stylesheet" href="../assets/css/dashboard/operacao.css" />
 
         <!--Google Fonts-->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -41,9 +27,8 @@
         />
 
         <!--Title-->
-        <title>Displays | VOOH</title>
+        <title>Painel | VOOH</title>
     </head>
-
     <body>
         <!--Sidebar-->
         <aside class="sidebar">
@@ -125,9 +110,47 @@
 
                 <!--Tabs-->
                 <ul class="tabs">
+                    <!--Saúde Operacional-->
+                    <li>
+                        <a
+                            class="active"
+                            href="dashboard.html"
+                            title="Dashboard"
+                        >
+                            <svg
+                                width="30"
+                                height="30"
+                                viewBox="0 0 30 30"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <g>
+                                    <path
+                                        d="M16.25 25C22.5 25 25 22.5 25 16.25C25 16.25 25 8.75 25 8.75C25 2.5 22.5 0 16.25 0C16.25 0 8.75 0 8.75 0C2.5 0 0 2.5 0 8.75C0 8.75 0 16.25 0 16.25C0 22.5 2.5 25 8.75 25C8.75 25 16.25 25 16.25 25Z"
+                                        fill="none"
+                                        stroke-width="2"
+                                        stroke="#FFFFFF"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        transform="translate(2.462 2.5)"
+                                    />
+                                    <path
+                                        d="M0 2.64271C0 2.64271 7.5 2.61771 7.5 2.61771C8.4375 2.61771 9.4875 3.33021 9.8375 4.20521C9.8375 4.20521 11.2625 7.80521 11.2625 7.80521C11.5875 8.61771 12.1 8.61771 12.425 7.80521C12.425 7.80521 15.2875 0.542713 15.2875 0.542713C15.5625 -0.157286 16.075 -0.182286 16.425 0.480214C16.425 0.480214 17.725 2.94271 17.725 2.94271C18.1125 3.68021 19.1125 4.28021 19.9375 4.28021C19.9375 4.28021 25.0125 4.28021 25.0125 4.28021"
+                                        fill="none"
+                                        stroke-width="2"
+                                        stroke="#FFFFFF"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        transform="translate(2.462 13.232)"
+                                    />
+                                </g></svg
+                            ><span>Saúde Operacional</span>
+                        </a>
+                    </li>
+
                     <!--Dashboard-->
                     <li>
-                        <a href="./dashboard.html" title="Dashboard">
+                        <a class="" href="dashboard.html" title="Dashboard">
                             <svg
                                 width="30"
                                 height="30"
@@ -159,7 +182,7 @@
 
                     <!--Displays-->
                     <li>
-                        <a href="./displays.html" title="Displays">
+                        <a href="displays.html" title="Displays">
                             <svg
                                 width="30"
                                 height="30"
@@ -230,58 +253,6 @@
                                 </g>
                             </svg>
                             <span>Alertas</span>
-                        </a>
-                    </li>
-
-                    <!--Incidentes-->
-                    <li>
-                        <a class="active" href="#" title="Incidentes">
-                            <?xml version="1.0" encoding="utf-8"?>
-                            <svg
-                                width="30"
-                                height="30"
-                                viewBox="0 0 27 27"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <g>
-                                    <g transform="translate(4 4)">
-                                        <path
-                                            d="M2.85714 0C2.85714 0 18.5714 0 18.5714 0C20.1494 0 21.4286 1.27919 21.4286 2.85714C21.4286 2.85714 21.4286 11.4983 21.4286 11.4983C21.4286 13.0046 20.263 14.2386 18.7847 14.3476C18.7847 14.3476 18.5607 14.3554 18.5607 14.3554C18.5607 14.3554 2.84641 14.2964 2.84641 14.2964C1.27265 14.2905 0 13.0131 0 11.4393C0 11.4393 0 2.85714 0 2.85714C0 1.27919 1.27919 7.15256e-07 2.85714 7.15256e-07C2.85714 7.15256e-07 2.85714 0 2.85714 0Z"
-                                            fill="none"
-                                            stroke-width="2"
-                                            stroke="#FFFFFF"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            transform="translate(0 1)"
-                                        />
-                                        <path
-                                            d="M0 0L14.3371 0"
-                                            fill="none"
-                                            stroke-width="2"
-                                            stroke="#FFFFFF"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            transform="matrix(1 0 0 1 3.52 18.151)"
-                                        />
-                                        <path
-                                            d="M0 0L8.57143 0"
-                                            fill="none"
-                                            stroke-width="2"
-                                            stroke="#FFFFFF"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            transform="matrix(1 0 0 1 6.428 20.994)"
-                                        />
-                                        <path
-                                            d="M2.4375 9.98438L1.00781 9.98438L0.708984 4.25977L2.73633 4.25977L2.4375 9.98438ZM0.685547 11.9883Q0.685547 11.4375 0.987305 11.2148Q1.28906 10.9922 1.7168 10.9922Q2.13281 10.9922 2.43457 11.2148Q2.73633 11.4375 2.73633 11.9883Q2.73633 12.5156 2.43457 12.75Q2.13281 12.9844 1.7168 12.9844Q1.28906 12.9844 0.987305 12.75Q0.685547 12.5156 0.685547 11.9883Z"
-                                            fill="#FFFFFF"
-                                            transform="translate(9 0)"
-                                        />
-                                    </g>
-                                </g>
-                            </svg>
-                            <span>Incidentes</span>
                         </a>
                     </li>
 
@@ -400,10 +371,8 @@
                     </div>
 
                     <div class="info">
-                        <span id="usuarionome" class="role">Administrador</span>
-                        <span id="usuariocargo" class="name"
-                            >Elicia Prietro</span
-                        >
+                        <span id="usuarionome" class="role"></span>
+                        <span id="usuariocargo" class="name"></span>
                     </div>
                 </div>
 
@@ -413,263 +382,7 @@
             </div>
         </aside>
 
-        <div class="body">
-            <!--Container-->
-            <div class="container">
-                <!--Title-->
-                <div class="title">
-                    <span
-                        >Painel de monitoramento / <a href="#">Incidentes</a>
-                    </span>
-                </div>
-
-                <!--KPIS-->
-                <div class="kpis">
-                    <div class="card">
-                        <div class="icon">
-                            <span class="desc">Dispositivos offline</span>
-                            <div class="i">
-                                <div class="ii">
-                                    <?xml version="1.0" encoding="utf-8"?>
-                                    <svg
-                                        width="65.092"
-                                        height="68.531"
-                                        viewBox="0 0 65.092 68.531"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <g>
-                                            <path
-                                                d="M7 0L58.0913 0C61.9578 0 65.0913 3.13348 65.0913 7L65.0913 61.5309C65.0913 65.3975 61.9578 68.5309 58.0913 68.5309L7 68.5309C3.13348 68.5309 0 65.3975 0 61.5309L0 7C0 3.13348 3.13348 0 7 0L7 0Z"
-                                                fill="#FA2D37"
-                                                transform="scale(1 1)"
-                                            />
-                                            <g
-                                                transform="matrix(1 0 0 1 5.918 6.23)"
-                                            >
-                                                <rect
-                                                    width="53.257"
-                                                    height="56.071"
-                                                    fill="#FA2D37"
-                                                    fill-rule="evenodd"
-                                                />
-                                                <g
-                                                    transform="translate(7.605 9.345)"
-                                                >
-                                                    <path
-                                                        d="M5.07205 0C5.07205 0 32.9683 0 32.9683 0C35.7696 0 38.0404 2.39083 38.0404 5.34008C38.0404 5.34008 38.0404 21.4907 38.0404 21.4907C38.0404 24.3058 35.9713 26.6122 33.3469 26.8161C33.3469 26.8161 32.9493 26.8307 32.9493 26.8307C32.9493 26.8307 5.053 26.7204 5.053 26.7204C2.25924 26.7093 0 24.3217 0 21.3803C0 21.3803 0 5.34008 0 5.34008C0 2.39083 2.27084 1.27317e-06 5.07205 1.27317e-06C5.07205 1.27317e-06 5.07205 0 5.07205 0Z"
-                                                        fill="none"
-                                                        stroke-width="3"
-                                                        stroke="#FFFFFF"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                    />
-                                                    <path
-                                                        d="M0 0L25.4516 0"
-                                                        fill="none"
-                                                        stroke-width="3"
-                                                        stroke="#FFFFFF"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                        transform="matrix(1 0 0 1 6.248 32.106)"
-                                                    />
-                                                    <path
-                                                        d="M0 0L15.2162 0"
-                                                        fill="none"
-                                                        stroke-width="3"
-                                                        stroke="#FFFFFF"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                        transform="translate(11.412 37.438)"
-                                                    />
-                                                </g>
-                                            </g>
-                                        </g>
-                                    </svg>
-                                </div>
-
-                                <span class="number">07/100</span>
-                            </div>
-                        </div>
-                        <div class="info">
-                            <div class="comparacao">
-                                ↓ 15 dispositivos desde ontem
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="icon">
-                            <span class="desc">Tempo offline hoje</span>
-                            <div class="i">
-                                <div class="ii">
-                                    <?xml version="1.0" encoding="utf-8"?>
-                                    <svg
-                                        width="65.631"
-                                        height="72.001"
-                                        viewBox="0 0 65.631 72.001"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <g transform="scale(1 1)">
-                                            <path
-                                                d="M7 0L58.631 0C62.4975 0 65.631 3.13348 65.631 7L65.631 65.001C65.631 68.8675 62.4975 72.001 58.631 72.001L7 72.001C3.13348 72.001 0 68.8675 0 65.001L0 7C0 3.13348 3.13348 0 7 0L7 0Z"
-                                                fill="#FA2D37"
-                                                transform="scale(1 1)"
-                                            />
-                                            <g
-                                                transform="matrix(1 0 0 1 8.342 10)"
-                                            >
-                                                <g>
-                                                    <g>
-                                                        <path
-                                                            d="M25.5 0L23.2002 0L23.2002 12.1259L27.7983 12.1259C27.7983 12.1259 27.7983 4.72529 27.7983 4.72529C38.3345 5.87245 46.3988 14.7464 46.3988 25.5001C46.3988 37.0257 37.0228 46.4016 25.5 46.4016C13.9768 46.4016 4.60117 37.0257 4.60117 25.5001C4.60117 20.783 6.13396 16.3319 9.03218 12.6294C9.03218 12.6294 9.84256 11.597 9.84256 11.597L6.21985 8.76196C6.21985 8.76196 5.41125 9.79444 5.41125 9.79444C1.8712 14.3144 0 19.7459 0 25.5C0 39.56 11.4387 51 25.5 51C39.56 51 51 39.5618 51 25.5C51 11.4387 39.56 0 25.5 0C25.5 0 25.5 0 25.5 0Z"
-                                                            fill="#FFFFFF"
-                                                            transform="scale(1 1)"
-                                                        />
-                                                        <path
-                                                            d="M11.1892 19.7864C12.0223 20.7852 13.193 21.3986 14.4824 21.5137C14.6313 21.5278 14.7801 21.5349 14.9263 21.5349C17.4143 21.5349 19.5403 19.5907 19.7636 17.1119C19.8805 15.8207 19.487 14.5591 18.655 13.5591C17.8219 12.5591 16.6521 11.9449 15.3592 11.8271C14.9341 11.7899 14.5031 11.8125 14.045 11.9025C14.045 11.9025 0 3.8147e-06 0 3.8147e-06C0 3.8147e-06 10.3172 15.162 10.3172 15.162C10.1875 15.5395 10.1085 15.8918 10.0774 16.2348C9.96062 17.5257 10.3554 18.7877 11.1892 19.7864C11.1892 19.7864 11.1892 19.7864 11.1892 19.7864Z"
-                                                            fill="#FFFFFF"
-                                                            transform="matrix(1 0 0 1 10.645 9.62)"
-                                                        />
-                                                    </g>
-                                                </g>
-                                            </g>
-                                        </g>
-                                    </svg>
-                                </div>
-
-                                <span class="number">01h</span>
-                            </div>
-                        </div>
-                        <div class="info">
-                            <div class="comparacao">↓ 1h nas últimas 24h</div>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="icon">
-                            <span class="desc">MTBF ATUAL</span>
-                            <div class="i">
-                                <div class="ii">
-                                    <?xml version="1.0" encoding="utf-8"?>
-                                    <svg
-                                        width="65.631"
-                                        height="72.001"
-                                        viewBox="0 0 65.631 72.001"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <g transform="scale(1 1)">
-                                            <path
-                                                d="M7 0L58.631 0C62.4975 0 65.631 3.13348 65.631 7L65.631 65.001C65.631 68.8675 62.4975 72.001 58.631 72.001L7 72.001C3.13348 72.001 0 68.8675 0 65.001L0 7C0 3.13348 3.13348 0 7 0L7 0Z"
-                                                fill="#6D33FF"
-                                                transform="scale(1 1)"
-                                            />
-                                            <g
-                                                transform="matrix(1 0 0 1 8.342 10)"
-                                            >
-                                                <g>
-                                                    <g>
-                                                        <path
-                                                            d="M25.5 0L23.2002 0L23.2002 12.1259L27.7983 12.1259C27.7983 12.1259 27.7983 4.72529 27.7983 4.72529C38.3345 5.87245 46.3988 14.7464 46.3988 25.5001C46.3988 37.0257 37.0228 46.4016 25.5 46.4016C13.9768 46.4016 4.60117 37.0257 4.60117 25.5001C4.60117 20.783 6.13396 16.3319 9.03218 12.6294C9.03218 12.6294 9.84256 11.597 9.84256 11.597L6.21985 8.76196C6.21985 8.76196 5.41125 9.79444 5.41125 9.79444C1.8712 14.3144 0 19.7459 0 25.5C0 39.56 11.4387 51 25.5 51C39.56 51 51 39.5618 51 25.5C51 11.4387 39.56 0 25.5 0C25.5 0 25.5 0 25.5 0Z"
-                                                            fill="#FFFFFF"
-                                                            transform="scale(1 1)"
-                                                        />
-                                                        <path
-                                                            d="M11.1892 19.7864C12.0223 20.7852 13.193 21.3986 14.4824 21.5137C14.6313 21.5278 14.7801 21.5349 14.9263 21.5349C17.4143 21.5349 19.5403 19.5907 19.7636 17.1119C19.8805 15.8207 19.487 14.5591 18.655 13.5591C17.8219 12.5591 16.6521 11.9449 15.3592 11.8271C14.9341 11.7899 14.5031 11.8125 14.045 11.9025C14.045 11.9025 0 3.8147e-06 0 3.8147e-06C0 3.8147e-06 10.3172 15.162 10.3172 15.162C10.1875 15.5395 10.1085 15.8918 10.0774 16.2348C9.96062 17.5257 10.3554 18.7877 11.1892 19.7864C11.1892 19.7864 11.1892 19.7864 11.1892 19.7864Z"
-                                                            fill="#FFFFFF"
-                                                            transform="matrix(1 0 0 1 10.645 9.62)"
-                                                        />
-                                                    </g>
-                                                </g>
-                                            </g>
-                                        </g>
-                                    </svg>
-                                </div>
-
-                                <span class="number">5Sem</span>
-                            </div>
-                        </div>
-                        <div class="info">
-                            <div class="comparacao">
-                                ↓ 1 semana vs média mensal
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="icon">
-                            <span class="desc">Disponibilidade (Uptime)</span>
-                            <div class="i">
-                                <div class="ii">
-                                    <?xml version="1.0" encoding="utf-8"?>
-                                    <svg
-                                        width="70"
-                                        height="73"
-                                        viewBox="0 0 70 73"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <g>
-                                            <path
-                                                d="M7 0L63 0C66.8665 0 70 3.13348 70 7L70 66C70 69.8665 66.8665 73 63 73L7 73C3.13348 73 0 69.8665 0 66L0 7C0 3.13348 3.13348 0 7 0L7 0Z"
-                                                fill="#6D33FF"
-                                            />
-                                            <g
-                                                transform="translate(4.199 4.38)"
-                                            >
-                                                <path
-                                                    d="M20.2535 39.2083C20.2535 39.2083 3.58067 21.8209 3.58067 21.8209C2.55938 20.7558 1.71035 19.4598 1.11358 18.0675C0.381447 16.4379 0 14.6414 0 12.7743C0 5.72951 5.49405 0 12.2493 0C12.9692 0 13.6951 0.0641603 14.4088 0.198897C14.4088 0.198897 13.6213 4.81844 13.6213 4.81844C13.1722 4.73503 12.7108 4.69011 12.2493 4.69011C7.97345 4.69011 4.49737 8.31517 4.49737 12.7743C4.49737 13.9484 4.73731 15.0712 5.20489 16.1171C5.59249 17.0281 6.12774 17.8365 6.75529 18.4974C6.75529 18.4974 20.2535 32.5677 20.2535 32.5677C20.2535 32.5677 33.7395 18.5038 33.7395 18.5038C34.3732 17.843 34.9023 17.0345 35.2714 16.162C35.7575 15.0712 35.9974 13.9484 35.9974 12.7743C35.9974 8.31517 32.5213 4.69011 28.2454 4.69011C25.8153 4.69011 23.502 5.90916 22.0562 7.94946C22.0562 7.94946 15.9161 16.085 15.9161 16.085L12.3785 13.1849C12.3785 13.1849 18.4878 5.11357 18.4878 5.11357C20.7334 1.93764 24.4002 0.00641441 28.2578 0.00641441C35.013 0.00641441 40.5071 5.73593 40.5071 12.7807C40.5071 14.6478 40.1256 16.4443 39.375 18.1124C38.8029 19.4598 37.9477 20.7558 36.9264 21.8209C36.9264 21.8209 20.2535 39.2083 20.2535 39.2083L20.2535 39.2083Z"
-                                                    fill="#FFFFFF"
-                                                    transform="matrix(1 0 0 1 11.247 13.429)"
-                                                />
-                                            </g>
-                                        </g>
-                                    </svg>
-                                </div>
-
-                                <span class="number">97%</span>
-                            </div>
-                        </div>
-                        <div class="info">
-                            <div class="comparacao">↓ 1% abaixo da meta</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="Graficos">
-                <div class="container">
-                    <div class="card-grafico">
-                        <div class="grafico-tendencia">
-                            <canvas id="graficoLinha"></canvas>
-                        </div>
-                    </div>
-                    <div class="card-grafico">
-                        <div class="grafico-ranking">
-                            <canvas id="graficoRanking"></canvas>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="Graficos">
-                <div class="container">
-                    <div class="card-grafico">
-                        <div class="heatMap">
-                            <div id="heatmap"></div>
-                        </div>
-                    </div>
-                    <div class="card-grafico">
-                        <div class="sugestoes"></div>
-                    </div>
-                </div>
-            </div>
-
-            <!--Sidebar-->
-            <script src="../assets/javascript/sidebar.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-        </div>
-        <script src="../assets/javascript/incidentes.js"></script>
+        <!--Sidebar-->
+        <script src="../assets/javascript/sidebar.js"></script>
     </body>
 </html>
