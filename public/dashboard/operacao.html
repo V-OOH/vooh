@@ -11,6 +11,9 @@
         <!--Stylesheet-->
         <link rel="stylesheet" href="../assets/css/dashboard/operacao.css" />
 
+        <!-- ChartJS -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
         <!--Google Fonts-->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,7 +30,7 @@
         />
 
         <!--Title-->
-        <title>Painel | VOOH</title>
+        <title>Saúde Operacional | VOOH</title>
     </head>
     <body>
         <!--Sidebar-->
@@ -371,8 +374,10 @@
                     </div>
 
                     <div class="info">
-                        <span id="usuarionome" class="role"></span>
-                        <span id="usuariocargo" class="name"></span>
+                        <span id="usuarionome" class="role"
+                            >Administradora</span
+                        >
+                        <span id="usuariocargo" class="name">Bianca</span>
                     </div>
                 </div>
 
@@ -392,11 +397,163 @@
                         >Painel de monitoramento /
                         <a href="#">Saúde Operacional</a>
                     </span>
+
+                    <div class="timer">
+                        <span
+                            >Última atualização:
+                            <span>13 de maior de 2026 às 16:35:03</span></span
+                        >
+                    </div>
+                </div>
+
+                <!--KPI's-->
+                <div class="kpis">
+                    <!--ìndice de saúde operacional-->
+                    <div id="kpi1">
+                        <div class="title">
+                            <span>ÍNDICE DE SAÚDE OPERACIONAL</span>
+                        </div>
+                        <div class="content">
+                            <div class="pontuacao-container">
+                                <canvas id="pontuacao"></canvas>
+                            </div>
+                            <div class="info">
+                                <span>Degradada</span>
+                                <span>-6pts vs 7 dias anteriores</span>
+                                <span>Tendências</span>
+                                <div class="tendencia-container">
+                                    <canvas
+                                        id="tendencia-pontuacao-chart"
+                                    ></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Uptime-->
+                    <div id="kpi2">
+                        <div class="title">
+                            <span>UPTIME ATUAL</span>
+                        </div>
+
+                        <div class="valor">
+                            <div class="icon">
+                                <svg
+                                    width="45"
+                                    height="45"
+                                    viewBox="0 0 45 45"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <g>
+                                        <path
+                                            d="M14.4668 26.855C14.4668 26.855 2.55762 14.9458 2.55762 14.9458C1.82813 14.2163 1.22168 13.3286 0.795411 12.375C0.272462 11.2588 0 10.0283 0 8.74952C0 3.92432 3.92432 0 8.74952 0C9.26368 0 9.78223 0.0439453 10.292 0.13623C10.292 0.13623 9.7295 3.30029 9.7295 3.30029C9.4087 3.24317 9.07911 3.2124 8.74952 3.2124C5.69532 3.2124 3.21241 5.69532 3.21241 8.74952C3.21241 9.55371 3.38379 10.3228 3.71778 11.0391C3.99463 11.6631 4.37696 12.2168 4.8252 12.6694C4.8252 12.6694 14.4668 22.3067 14.4668 22.3067C14.4668 22.3067 24.0996 12.6738 24.0996 12.6738C24.5523 12.2212 24.9302 11.6675 25.1939 11.0698C25.541 10.3228 25.7124 9.55371 25.7124 8.74952C25.7124 5.69532 23.2295 3.2124 20.1753 3.2124C18.4395 3.2124 16.7871 4.04737 15.7544 5.44483C15.7544 5.44483 11.3687 11.0171 11.3687 11.0171L8.8418 9.03077C8.8418 9.03077 13.2056 3.50244 13.2056 3.50244C14.8096 1.32715 17.4287 0.00439358 20.1841 0.00439358C25.0093 0.00439358 28.9336 3.92871 28.9336 8.75391C28.9336 10.0327 28.6611 11.2632 28.125 12.4058C27.7163 13.3286 27.1055 14.2163 26.376 14.9458C26.376 14.9458 14.4668 26.855 14.4668 26.855L14.4668 26.855Z"
+                                            fill="#FFFFFF"
+                                            transform="matrix(1 0 0 1 8.033 9.198)"
+                                        />
+                                    </g>
+                                </svg>
+                            </div>
+                            <span>92,5%</span>
+                        </div>
+
+                        <div class="info">
+                            <span>▼ 1,6% abaixo da meta</span>
+                            <span
+                                >Meta contratual:
+                                <span class="val">99%</span></span
+                            >
+                        </div>
+                    </div>
+
+                    <!--Downtime-->
+                    <div id="kpi3">
+                        <div class="title">
+                            <span>DOWNTIME ACUMULADO (MÊS)</span>
+                        </div>
+
+                        <div class="valor">
+                            <div class="icon">
+                                <svg
+                                    width="40"
+                                    height="40"
+                                    viewBox="0 0 40 40"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <g>
+                                        <g transform="translate(1.539 1.538)">
+                                            <g>
+                                                <path
+                                                    d="M0 18.4615C0 8.26551 8.26551 0 18.4615 0C28.6576 0 36.9231 8.26551 36.9231 18.4615C36.9231 28.6576 28.6576 36.9231 18.4615 36.9231C8.26551 36.9231 0 28.6576 0 18.4615Z"
+                                                    fill="none"
+                                                    stroke-width="3"
+                                                    stroke="#FFFFFF"
+                                                />
+                                                <path
+                                                    d="M0.185547 0L1.72401 0L1.72401 9.23077L0.185547 9.23077L0.185547 0ZM0 9.92944L0.990768 8.75098L8.06154 14.6864L7.07231 15.8648L0 9.92944Z"
+                                                    fill="#FFFFFF"
+                                                    fill-rule="evenodd"
+                                                    transform="translate(16.738 9.23)"
+                                                />
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+                            <span>154H</span>
+                        </div>
+
+                        <div class="info">
+                            <span>▼ 42h que no mês anterior</span>
+                            <span
+                                >Projeção até o fim do mês:
+                                <span class="val">+87h</span></span
+                            >
+                        </div>
+                    </div>
+
+                    <!--Nível de risco operacional-->
+                    <div id="kpi4">
+                        <div class="title">
+                            <span>NÍVEL DE RISCO OPERACIONAL</span>
+                        </div>
+
+                        <div class="valor">
+                            <div class="icon">
+                                <svg
+                                    width="40"
+                                    height="40"
+                                    viewBox="0 0 40 40"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <g>
+                                        <path
+                                            d="M0 14.0278C0 8.69845 0 6.0338 0.6292 5.13735C1.25838 4.2409 3.76387 3.38327 8.77485 1.66798C8.77485 1.66798 9.72953 1.3412 9.72953 1.3412C12.3417 0.447067 13.6477 0 15 0C16.3523 0 17.6583 0.447067 20.2705 1.3412C20.2705 1.3412 21.2252 1.66798 21.2252 1.66798C26.2362 3.38327 28.7417 4.2409 29.3708 5.13735C30 6.0338 30 8.69845 30 14.0278C30 14.0278 30 16.6523 30 16.6523C30 26.049 22.935 30.6092 18.5023 32.5455C17.3 33.0707 16.6988 33.3333 15 33.3333C13.3012 33.3333 12.7 33.0707 11.4976 32.5455C7.06493 30.6092 0 26.049 0 16.6523C0 16.6523 0 14.0278 0 14.0278ZM15 8.75C15.6903 8.75 16.25 9.30965 16.25 10C16.25 10 16.25 16.6667 16.25 16.6667C16.25 17.357 15.6903 17.9167 15 17.9167C14.3097 17.9167 13.75 17.357 13.75 16.6667C13.75 16.6667 13.75 10 13.75 10C13.75 9.30965 14.3097 8.75 15 8.75ZM15 23.3333C15.9205 23.3333 16.6667 22.5872 16.6667 21.6667C16.6667 20.7462 15.9205 20 15 20C14.0795 20 13.3333 20.7462 13.3333 21.6667C13.3333 22.5872 14.0795 23.3333 15 23.3333Z"
+                                            fill="#FFFFFF"
+                                            fill-rule="evenodd"
+                                            transform="translate(5 3.333)"
+                                        />
+                                    </g>
+                                </svg>
+                            </div>
+                            <span>Alto</span>
+                        </div>
+
+                        <div class="info">
+                            <span>Risco de violação de SLA</span>
+                            <span>Em 4 dias se o cenáio atual se mantiver</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
         <!--Sidebar-->
         <script src="../assets/javascript/sidebar.js"></script>
+
+        <!--ChartJS-->
+        <script src="../assets/javascript/operacao.js"></script>
     </body>
 </html>
