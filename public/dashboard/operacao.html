@@ -11,8 +11,7 @@
         <!--Stylesheet-->
         <link rel="stylesheet" href="../assets/css/dashboard/operacao.css" />
 
-        <!-- ChartJS -->
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
         <!--Google Fonts-->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -415,16 +414,14 @@
                         </div>
                         <div class="content">
                             <div class="pontuacao-container">
-                                <canvas id="pontuacao"></canvas>
+                                <div id="pontuacao"></div>
                             </div>
                             <div class="info">
                                 <span>Degradada</span>
                                 <span>-6pts vs 7 dias anteriores</span>
                                 <span>Tendências</span>
                                 <div class="tendencia-container">
-                                    <canvas
-                                        id="tendencia-pontuacao-chart"
-                                    ></canvas>
+                                    <div id="tendencia-pontuacao-chart"></div>
                                 </div>
                             </div>
                         </div>
@@ -543,8 +540,16 @@
 
                         <div class="info">
                             <span>Risco de violação de SLA</span>
-                            <span>Em 4 dias se o cenáio atual se mantiver</span>
+                            <span>Em 4 dias no cenário atual</span>
                         </div>
+                    </div>
+                </div>
+
+                <!--Disponibilidade e MTTR-->
+                <div class="disponibilidade">
+                    <!--Evolução da disponibilidade-->
+                    <div class="disponibilidade-container">
+                        <div id="disponibilidade"></div>
                     </div>
                 </div>
             </div>

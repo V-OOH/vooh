@@ -1,84 +1,191 @@
-// Pontuação - Donut
-const ctx = document.getElementById("pontuacao");
 const value = 75;
 const max = 100;
 let color = "#ff9b00";
-new Chart(ctx, {
-  type: "doughnut",
-  data: {
-    datasets: [
-      {
-        data: [value, max - value],
-        backgroundColor: [color, "#d3d3d3"],
-        borderWidth: 0,
-      },
-    ],
+
+const opcoesPontuacao = {
+  chart: {
+    type: "radialBar",
+    height: 250,
+    fontFamily: "Open Sans",
   },
-  options: {
-    cutout: "75%",
-    plugins: {
-      legend: {
-        display: false,
+  series: [(value / max) * 100],
+  colors: [color],
+  plotOptions: {
+    radialBar: {
+      hollow: {
+        size: "20%",
+        margin: 5,
+        background: "transparent",
+      },
+      track: {
+        background: "#d3d3d3",
+        strokeWidth: "100%",
+      },
+      dataLabels: {
+        show: true,
+        name: { show: false },
+        value: {
+          show: true,
+          fontSize: "24px",
+          fontWeight: "bold",
+          color: "#331477",
+          offsetY: 8,
+
+          formatter: function () {
+            return `${value}/${max}`;
+          },
+        },
       },
     },
   },
-  plugins: [
+  stroke: {
+    lineCap: "butt",
+  },
+};
+
+const chartPontuacao = new ApexCharts(
+  document.querySelector("#pontuacao"),
+  opcoesPontuacao,
+);
+chartPontuacao.render();
+
+const opcoesTendencia = {
+  chart: {
+    type: "line",
+    height: 80,
+    sparkline: {
+      enabled: true,
+    },
+    animations: { enabled: true },
+  },
+  series: [
     {
-      id: "centerText",
-      beforeDraw(chart) {
-        const { width, height, ctx } = chart;
-
-        ctx.restore();
-
-        const fontSize = (height / 6).toFixed(2);
-        ctx.font = `bold ${fontSize}px sans-serif`;
-        ctx.textBaseline = "middle";
-        ctx.textAlign = "center";
-        ctx.fillStyle = "#331477";
-
-        const text = `${value}/${max}`;
-
-        ctx.fillText(text, width / 2, height / 2);
-
-        ctx.save();
-      },
+      data: [10, 20, 15, 30, 25, 40],
     },
   ],
-});
+  colors: [color],
+  stroke: {
+    curve: "smooth",
+    width: 2,
+  },
+  markers: {
+    size: 0,
+  },
+  tooltip: {
+    enabled: false,
+  },
+};
 
-// Tendência da pontuação
-const ctx2 = document.getElementById("tendencia-pontuacao-chart");
-new Chart(ctx2, {
-  type: "line",
-  data: {
-    labels: [1, 2, 3, 4, 5, 6],
-    datasets: [
+const chartTendencia = new ApexCharts(
+  document.querySelector("#tendencia-pontuacao-chart"),
+  opcoesTendencia,
+);
+chartTendencia.render();
+
+// ----------------------------------------------------------------
+const opcoes = {
+  chart: {
+    type: "area",
+    height: 350,
+    fontFamily: "'Open Sans', sans-serif",
+    toolbar: { show: false },
+  },
+
+  series: [
+    {
+      name: "Disponibilidade",
+      type: "area",
+      data: [
+        { x: "6 abr", y: 94 },
+        { x: "9 abr", y: 88 },
+        { x: "12 abr", y: 82 },
+        { x: "15 abr", y: 76 },
+        { x: "18 abr", y: 69 },
+        { x: "21 abr", y: 75 },
+        { x: "24 abr", y: 70 },
+        { x: "27 abr", y: 65 },
+        { x: "30 abr", y: 49 },
+        { x: "3 mai", y: 44 },
+        { x: "6 mai", y: 39 },
+      ],
+    },
+    {
+      name: "Projeção",
+      type: "line",
+      data: [
+        { x: "6 mai", y: 41 },
+        { x: "9 mai", y: 32 },
+        { x: "12 mai", y: 28 },
+      ],
+    },
+  ],
+
+  colors: ["#6d33ff", "#6d33ff"],
+
+  stroke: {
+    curve: "smooth",
+    width: [3, 3],
+    dashArray: [0, 5],
+  },
+
+  fill: {
+    type: "solid",
+    opacity: [0.15, 0],
+  },
+
+  title: {
+    text: "Evolução e Projeção da Disponibilidade",
+    align: "left",
+    margin: 20,
+    offsetX: 10,
+    style: {
+      fontSize: "16px",
+      fontWeight: "bold",
+      color: "#111111",
+    },
+  },
+
+  annotations: {
+    yaxis: [
       {
-        data: [10, 20, 15, 30, 25, 40],
-        borderColor: color,
-        borderWidth: 2,
-        pointRadius: 0,
-        fill: false,
-        tension: 0.4,
+        y: 94,
+        borderColor: "#ff3333",
+        strokeDashArray: 4,
+        borderWidth: 1.5,
+        label: {
+          text: "Meta (94%)",
+          align: "right",
+          style: {
+            color: "#fff",
+            background: "#ff3333",
+            fontFamily: "'Poppins', sans-serif",
+          },
+        },
       },
     ],
   },
-  options: {
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: {
-      legend: { display: false },
-      tooltip: { enabled: false },
-    },
-    scales: {
-      x: {
-        display: false,
-      },
-      y: {
-        display: false,
-      },
+
+  xaxis: {
+    type: "category",
+    labels: { style: { colors: "#666666" } },
+    axisBorder: { show: false },
+    axisTicks: { show: false },
+  },
+  yaxis: {
+    min: 20,
+    max: 100,
+    labels: {
+      style: { colors: "#666666" },
+      formatter: (value) => value + "%",
     },
   },
-});
+  grid: {
+    borderColor: "rgba(0, 0, 0, 0.05)",
+  },
+};
 
-// ----------------------------------------------------------------
+const chart = new ApexCharts(
+  document.querySelector("#disponibilidade"),
+  opcoes,
+);
+chart.render();
