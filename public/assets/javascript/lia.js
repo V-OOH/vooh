@@ -37,10 +37,17 @@ iconChat.addEventListener("click", () => {
   }
 });
 
+// Função para scroll
+function scroll() {
+  document.querySelector(".scroll").scrollTop =
+    document.querySelector(".scroll").scrollHeight;
+}
+
 const divError = document.getElementById("error");
 
 const msgErroSpan = divError.querySelector("span");
 
+// Função para obter a data e hora
 function obterDataHora() {
   const data = new Date();
   let dia = data.getDate();
@@ -57,10 +64,12 @@ function obterDataHora() {
   return dataHora;
 }
 
+// Obter a última mensagem do container
 function pegarUltimaMensagem() {
   return document.querySelector(".scroll > div:last-of-type");
 }
 
+// Função de envio de mensagem do usuário
 function usuario(msg) {
   let html = `
   <div class="you-box">
@@ -77,8 +86,10 @@ function usuario(msg) {
   } else {
     containerPrincipal.insertAdjacentHTML("beforeend", html);
   }
+  scroll();
 }
 
+// Função de enviar a mensagem da LIA
 function lia(msg) {
   let html = `
   <div class="lia-box" id="lia">
@@ -95,8 +106,10 @@ function lia(msg) {
   } else {
     containerPrincipal.insertAdjacentHTML("beforeend", html);
   }
+  scroll();
 }
 
+// Função para evitar spamar a API
 function aguardar() {
   const area = document.getElementById("msg");
   const button = document.getElementById("send-message");
@@ -112,6 +125,7 @@ function aguardar() {
   }, 10000);
 }
 
+// Exibe erro na DIV
 function erro(erro) {
   divError.style.display = "flex";
   msgErroSpan.innerHTML = `${erro}`;
@@ -133,6 +147,7 @@ async function enviarMensagem() {
   }
 
   usuario(mensagem);
+  tocarAudio();
 
   try {
     const response = await fetch("/lia/perguntar", {
@@ -151,6 +166,7 @@ async function enviarMensagem() {
 
     if (response.ok && data.resposta) {
       lia(`${data.resposta}`);
+      tocarAudio();
       aguardar();
     } else {
       throw new Error(data.error || data.resposta || "Erro no servidor");
@@ -165,24 +181,32 @@ const btnSend = document.getElementById("send-message");
 
 btnSend.onclick = async (e) => {
   e.preventDefault();
+  tocarAudio();
   await enviarMensagem();
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  lia("Olá!, Como posso te ajudar?");
+  setTimeout(() => {
+    tocarAudio();
+    lia("Olá!, Como posso te ajudar?");
+  }, 2000);
 });
 
 const baloesMensagem = document.querySelectorAll(".baloon .b");
 
+// Envio rápido
 async function enviarRapido(id) {
   mensagem = "";
 
   if (id == 1) {
     mensagem = "Contratar os serviços da VOOH";
+    tocarAudio();
   } else if (id == 2) {
     mensagem = "O que é a tecnologia DOOH?";
+    tocarAudio();
   } else if (id == 3) {
     mensagem = "Olá, tudo bem?";
+    tocarAudio();
   }
 
   if (chatBody.style.display === "flex") {
@@ -196,4 +220,24 @@ async function enviarRapido(id) {
   document.getElementById("msg").value = mensagem;
 
   await enviarMensagem(mensagem);
+}
+
+// Som de chat
+const som = new Audio(
+  "../assets/audio/dragon-studio-new-notification-3-398649.mp3",
+);
+
+som.volume = 1.0; // 100%
+som.loop = false;
+
+// Função para reproduzir
+function tocarAudio() {
+  som
+    .play()
+    .then(() => {
+      console.log("Áudio iniciado com sucesso.");
+    })
+    .catch((error) => {
+      console.error("Falha ao reproduzir áudio:", error);
+    });
 }
