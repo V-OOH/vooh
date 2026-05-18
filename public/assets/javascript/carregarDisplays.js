@@ -22,9 +22,10 @@ document.addEventListener("DOMContentLoaded", () => {
   // Aqui depois dá para fazer um foreach()
 
   for (let i = 0; i <= 50; i++) {
+    let displayId = i + 1;
     html += `
-        <tr id="d-1" onclick='abrirDashboard(1)'>
-            <td class="id-display">D${i + 1}</td>
+        <tr id="d-${displayId}" onclick='abrirDashboard(${displayId})'>
+            <td class="id-display">D${displayId}</td>
             <td>192.168.171.13</td>
             <td class="mac">00:19:B9:FB:E2:58</td>
             <td>São Paulo - Metrô/Linha 4</td>
