@@ -532,7 +532,7 @@
 
   .grafico-bar {
     width: 400px;
-    height: 240px;
+    height: 230px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
     margin-top: 10px;
@@ -545,7 +545,7 @@
     height: 300px;
     width: 100%;
     width: 370px;
-    height: 240px;
+    height: 230px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
     margin-top: 10px;
@@ -553,8 +553,8 @@
 
   .grafico-bar-vertical {
     display: flex;
-    width: 400px;
-    height: 450px;
+    width: 380px;
+    height: 440px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
     margin-top: 20px;
