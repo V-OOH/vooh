@@ -1,3 +1,34 @@
+// Gráfico de linhas KPI
+const graficoKPI = document.getElementById('line-kpi').getContext('2d');
+const graficoLineKpi = new Chart(graficoKPI, {
+  type: 'line', // Tipo do gráfico
+  data: {
+    labels: ['', '', '', '', '', ''],
+    datasets: [{
+      // label: 'Quantidade de Alertas',
+      data: [1, 5, 5, 12, 8, 1],
+      borderColor: 'rgba(75, 192, 192, 1)', // Cor da linha
+      backgroundColor: 'rgba(75, 192, 192, 0.2)', // Cor de preenchimento
+      borderWidth: 2,
+      tension: 0.3 // Suavidade da linha
+    }]
+  },
+  options: {
+    plugins: {
+      legend: {
+        display: false,
+      }
+    },
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+  }
+});
+
+
+
 // Gráfico de Linhas
 const ctx = document.getElementById('graficoLine').getContext('2d');
 const graficoLine = new Chart(ctx, {

@@ -237,7 +237,7 @@
   .chart-container {
     border-left: 1px solid #ccc;
     padding-left: 15px;
-    width: 200px;
+    width: 100px;
   }
 
   .mini-chart {
@@ -601,7 +601,7 @@
   .kpi-card {
     background: #fff;
     border-radius: 12px;
-    padding: 20px;
+    padding: 15px;
     width: 380px;
     height: 160px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -644,9 +644,13 @@
   }
 
   .card-title {
-    color: var(--purple-main);
     font-size: 0.9rem;
     margin-bottom: 10px;
+    font-weight: 700;
+  }
+
+  .card-title-disp {
+    font-size: 0.9rem;
     font-weight: 700;
   }
 
@@ -710,12 +714,12 @@
     font-size: 16px;
   }
 
-  .card-footer {
+  /* .card-footer {
     display: flex;
     align-items: center;
     font-size: 13px;
-    gap: 10px;
-  }
+    gap: 5px;
+  } */
 
   .status-attention {
     display: flex;
@@ -757,7 +761,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15px;
+    gap: 20px;
   }
 
   .icon-box {
@@ -786,9 +790,11 @@
   }
 
   .chart-container {
-    border-left: 1px solid #ccc;
-    padding-left: 15px;
-    width: 200px;
+    width: 180px;
+    height: 90px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    margin-top: 10px;
   }
 
   .mini-chart {
@@ -809,9 +815,9 @@
     line-height: 1.6;
   }
 
-  .card-footer {
+  /* .card-footer {
     font-size: 0.9rem;
-  }
+  } */
 
   .warning {
     font-size: 0.9rem;
@@ -841,6 +847,14 @@
     display: flex;
     align-items: baseline;
     gap: 5px;
+  }
+
+  .stat-value-disp {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #111;
+    display: flex;
+    align-items: baseline;
   }
 
   .stat-value-2 {
@@ -888,8 +902,17 @@
   }
 
   .card-footer {
-    padding-top: 15px;
+    padding-top: 10px;
     font-size: 0.85rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .card-footer-disp {
+    /* padding-top: 10px;  */
+    font-size: 0.75rem;
     font-weight: 600;
     display: flex;
     align-items: center;
@@ -1081,7 +1104,7 @@
 
   .grafico-bar {
     width: 400px;
-    height: 230px;
+    height: 260px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
     margin-top: 10px;
@@ -1094,7 +1117,7 @@
     height: 300px;
     width: 100%;
     width: 370px;
-    height: 230px;
+    height: 260px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
     margin-top: 10px;
@@ -1103,7 +1126,7 @@
   .grafico-bar-vertical {
     display: flex;
     width: 380px;
-    height: 440px;
+    height: 470px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
     margin-top: 20px;

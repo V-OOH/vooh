@@ -374,7 +374,7 @@
             </div>
 
             <div class="kpi-card">
-                <h2 class="card-title">Disponibilidade Global</h2>
+                <h2 class="card-title-disp">Disponibilidade Global</h2>
                 <div class="card-body">
                     <div class="main-stat">
                         <div class="ii">
@@ -384,20 +384,15 @@
                                 <line x1="12" y1="17" x2="12" y2="21"></line>
                             </svg>
                         </div>
-                        <div class="stat-value color-orange">5%</div>
-                        <div class="chart-container" style="width: 100px;">
-                            <svg viewBox="0 0 100 40">
-                                <polyline fill="none" stroke="#5d4297" stroke-width="2"
-                                    points="0,35 20,20 40,30 60,15 80,25 100,5" />
-                                <circle cx="20" cy="20" r="3" fill="#d4ff00" />
-                                <circle cx="60" cy="15" r="3" fill="#d4ff00" />
-                                <circle cx="100" cy="5" r="3" fill="#d4ff00" />
-                            </svg>
+                        <div class="stat-value-disp">5%</div>
+                        <div class="chart-container">
+                            <canvas id="line-kpi"></canvas>
                         </div>
                     </div>
 
+
                 </div>
-                <div class="card-footer color-green">
+                <div class="card-footer-disp">
                     <span>▼ 2 % vs Ontem</span>
                 </div>
             </div>
@@ -456,12 +451,12 @@
 
             <div class="space">
                 <div class="grafico_style">
-                <div class="grafico-bar-vertical">
-                    <canvas id="grafico-bar-vertical"></canvas>
+                    <div class="grafico-bar-vertical">
+                        <canvas id="grafico-bar-vertical"></canvas>
+                    </div>
                 </div>
             </div>
-            </div>
-            
+
 
         </div>
     </div>
