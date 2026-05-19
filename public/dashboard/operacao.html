@@ -4,13 +4,36 @@
         <!--HTML Meta Tags-->
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="" />
-        <meta name="keywords" content="" />
-        <meta name="author" content="VOOH" />
+        <meta name="author" content="Marley de S. Santos" />
+        <meta
+            name="copyright"
+            content="© COPYRIGHT 2026 - VOOH TECNOLOGIA. TODOS OS DIREITOS RESERVADO"
+        />
+        <meta
+            name="description"
+            content="Sistema de Monitoramento para Mídia DOOH"
+        />
+        <meta
+            name="keywords"
+            content="VOOH, Displays, Monitoramento, Tecnologia, Mídia DOOH, DOOH, Observabilidade, Sistema de Monitoramento para DOOH"
+        />
 
         <!--Stylesheet-->
         <link rel="stylesheet" href="../assets/css/dashboard/operacao.css" />
 
+        <!--Open Graph Meta Tags-->
+        <meta property="og:title" content="VOOH | Visão 360º para Mídia DOOH" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://localhost:3333/" />
+        <meta
+            property="og:image"
+            content="http://localhost:3333/assets/images/banner.png"
+        />
+
+        <!--Theme-->
+        <meta name="theme-color" content="#6D33FF" />
+
+        <!--Apex Charts-->
         <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
         <!--Google Fonts-->
@@ -551,6 +574,87 @@
                     <div class="disponibilidade-container">
                         <div id="disponibilidade"></div>
                     </div>
+
+                    <!--MTTR-->
+                    <div class="mttr">
+                        <div class="kpi-eficiencia">
+                            <span
+                                >Eficiência da equipe (MTTR) (últimos 30
+                                dias)</span
+                            >
+
+                            <div class="information">
+                                <div class="big-kpi">48 min</div>
+                                <div class="desc-kpi">
+                                    <div>▼ 14%</div>
+                                    <div>Melhor que 30 dias anteriores</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="metas-casos">
+                            <!--Meta-->
+                            <div class="meta-container">
+                                <div class="text">
+                                    <span id="value-meta">35 min</span>
+                                    <span>Meta</span>
+                                </div>
+                                <div class="">
+                                    <svg
+                                        width="35"
+                                        height="35"
+                                        viewBox="0 0 35 35"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <g>
+                                            <path
+                                                d="M15.2043 5.27657C14.9806 4.73199 14.4514 4.37534 13.8626 4.3724C13.8626 4.3724 10.946 4.3724 10.946 4.3724C10.946 4.3724 10.946 1.45573 10.946 1.45573C10.943 0.866986 10.5864 0.337768 10.0418 0.114061C9.4987 -0.114309 8.87155 0.00651717 8.45219 0.420311C8.45219 0.420311 4.07719 4.79531 4.07719 4.79531C3.80421 5.07053 3.65204 5.44311 3.65429 5.83074C3.65429 5.83074 3.65429 9.60782 3.65429 9.60782C3.65429 9.60782 0.431374 12.8162 0.431374 12.8162C0.155291 13.09 0 13.4627 0 13.8516C0 14.2404 0.155291 14.6132 0.431374 14.887C0.7052 15.1631 1.07794 15.3184 1.46679 15.3184C1.85564 15.3184 2.22838 15.1631 2.50221 14.887C2.50221 14.887 5.71054 11.6641 5.71054 11.6641C5.71054 11.6641 9.48763 11.6641 9.48763 11.6641C9.87526 11.6663 10.2478 11.5141 10.523 11.2412C10.523 11.2412 14.898 6.86615 14.898 6.86615C15.3118 6.44679 15.4327 5.81965 15.2043 5.27657C15.2043 5.27657 15.2043 5.27657 15.2043 5.27657Z"
+                                                fill="#6D33FF"
+                                                transform="matrix(1 0 0 1 16.762 2.919)"
+                                            />
+                                            <path
+                                                d="M14.5833 29.1667C6.52918 29.1667 0 22.6375 0 14.5833C1.43051e-06 6.52918 6.52918 0 14.5833 0C14.5833 0 15.1958 0 15.1958 0C16.0012 0.0724876 16.5954 0.784168 16.5229 1.58958C16.4504 2.395 15.7387 2.98915 14.9333 2.91667C14.9333 2.91667 14.5833 2.91667 14.5833 2.91667C8.14001 2.91667 2.91667 8.14001 2.91667 14.5833C2.91667 21.0267 8.14001 26.25 14.5833 26.25C21.0267 26.25 26.25 21.0267 26.25 14.5833C26.2573 14.4668 26.2573 14.3499 26.25 14.2333C26.2136 13.8462 26.3333 13.4606 26.5824 13.1621C26.8316 12.8636 27.1897 12.677 27.5771 12.6437C27.9642 12.6073 28.3498 12.727 28.6483 12.9762C28.9468 13.2254 29.1334 13.5834 29.1667 13.9708C29.1667 14.175 29.1667 14.3792 29.1667 14.5833C29.1667 22.6375 22.6375 29.1667 14.5833 29.1667ZM23.1579 16.3336C23.3187 15.5283 22.7963 14.7451 21.991 14.5841C21.1857 14.4231 20.4024 14.9453 20.2412 15.7505C19.6606 18.6213 17.0412 20.6165 14.1193 20.4135C11.1974 20.2105 8.87909 17.8723 8.70108 14.9487C8.52307 12.0252 10.5406 9.42296 13.4163 8.86694C13.9374 8.76286 14.3633 8.38865 14.5337 7.8853C14.704 7.38196 14.5929 6.82596 14.2421 6.4268C13.8913 6.02764 13.3542 5.84597 12.8331 5.95023C8.54253 6.82722 5.56105 10.7412 5.85514 15.1106C6.14924 19.48 9.62833 22.9591 13.9978 23.2532C18.3672 23.5473 22.2812 20.5658 23.1581 16.2752C23.1581 16.2752 23.1579 16.3336 23.1579 16.3336Z"
+                                                fill="#331477"
+                                                transform="translate(2.918 2.916)"
+                                            />
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div class="mini-kpis">
+                                <div class="mini-card">
+                                    <span>128 min</span>
+                                    <span>Pior caso</span>
+                                    <span>Zona A</span>
+                                </div>
+                                <div class="mini-card">
+                                    <span>18 min</span>
+                                    <span>Melhor caso</span>
+                                    <span>Zona C</span>
+                                </div>
+                            </div>
+
+                            <!--Resoluções de incidentes-->
+                            <div class="incidentes">
+                                <div class="title-incidentes">
+                                    <span>Resolução de incidentes</span>
+                                </div>
+
+                                <div class="cards">
+                                    <div class="card">
+                                        <span>Dentro da SLA</span>
+                                        <span>91%</span>
+                                    </div>
+                                    <div class="card">
+                                        <span>Resolvidos</span>
+                                        <span>128</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -559,6 +663,6 @@
         <script src="../assets/javascript/sidebar.js"></script>
 
         <!--ChartJS-->
-        <script src="../assets/javascript/operacao.js"></script>
+        <script src="../assets/javascript/dashboard/operacao.js"></script>
     </body>
 </html>
