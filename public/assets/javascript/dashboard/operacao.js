@@ -1,91 +1,11 @@
 const value = 75;
 const max = 100;
+
+// Cor padrão
 let color = "#ff9b00";
 
-const opcoesPontuacao = {
-  chart: {
-    type: "radialBar",
-    height: 250,
-    fontFamily: "Open Sans",
-  },
-  series: [(value / max) * 100],
-  colors: [color],
-  plotOptions: {
-    radialBar: {
-      hollow: {
-        size: "20%",
-        margin: 5,
-        background: "transparent",
-      },
-      track: {
-        background: "#d3d3d3",
-        strokeWidth: "100%",
-      },
-      dataLabels: {
-        show: true,
-        name: { show: false },
-        value: {
-          show: true,
-          fontSize: "24px",
-          fontWeight: "bold",
-          color: "#331477",
-          offsetY: 8,
-
-          formatter: function () {
-            return `${value}/${max}`;
-          },
-        },
-      },
-    },
-  },
-  stroke: {
-    lineCap: "butt",
-  },
-};
-
-const chartPontuacao = new ApexCharts(
-  document.querySelector("#pontuacao"),
-  opcoesPontuacao,
-);
-chartPontuacao.render();
-
-const opcoesTendencia = {
-  chart: {
-    type: "line",
-    height: 80,
-    sparkline: {
-      enabled: true,
-    },
-    animations: { enabled: true },
-  },
-  series: [
-    {
-      data: [10, 20, 15, 30, 25, 40],
-    },
-  ],
-  colors: [color],
-  stroke: {
-    curve: "smooth",
-    width: 2,
-  },
-  markers: {
-    size: 0,
-  },
-  tooltip: {
-    enabled: false,
-  },
-};
-
-const chartTendencia = new ApexCharts(
-  document.querySelector("#tendencia-pontuacao-chart"),
-  opcoesTendencia,
-);
-chartTendencia.render();
-
-// ----------------------------------------------------------------
-
-dados = [92, 90, 87, 92, 91, 90, 95, 90, 85];
-const datas = [
+let dados = [92, 90, 87, 92, 91, 90, 95, 90, 85];
+let datas = [
   "2026-04-07",
   "2026-04-11",
   "2026-04-15",
@@ -103,12 +23,61 @@ const datas = [
  * @author Marley de S. Santos
  */
 const fetchData = () => {
-  // fetch("url")
-  //   .then((response) => response.json())
-  //   .then((data) => {
-  //     return data;
-  //   })
-  //   .catch((error) => console.error(error));
+  fetch("url")
+    .then((response) => response.json())
+    .then((data) => {
+      return data;
+    })
+    .catch((error) => console.error(error));
+};
+
+/**
+ * Pontuação Operacional
+ */
+const pontuacao = () => {
+  const opcoesPontuacao = {
+    chart: {
+      type: "radialBar",
+      height: 230,
+      fontFamily: "Open Sans",
+    },
+    series: [(value / max) * 100],
+    colors: [color],
+    plotOptions: {
+      radialBar: {
+        hollow: {
+          size: "65%",
+        },
+        track: {
+          background: "#d3d3d3",
+          strokeWidth: "100%",
+        },
+        dataLabels: {
+          show: true,
+          name: { show: false },
+          value: {
+            show: true,
+            fontSize: "24px",
+            fontWeight: "bold",
+            color: "#331477",
+            offsetY: 8,
+            formatter: function () {
+              return `${value}/${max}`;
+            },
+          },
+        },
+      },
+    },
+    stroke: {
+      lineCap: "butt",
+    },
+  };
+
+  const chartPontuacao = new ApexCharts(
+    document.querySelector("#pontuacao"),
+    opcoesPontuacao,
+  );
+  chartPontuacao.render();
 };
 
 /**
@@ -209,8 +178,118 @@ const uptime = () => {
 };
 
 /**
+ * MTTR
+ */
+const mttr = () => {
+  let configChartMTTR = {
+    series: [
+      {
+        name: "",
+        data: [10, 41, 35, 51, 49, 62, 69, 91, 80],
+      },
+    ],
+    chart: {
+      height: "100%",
+      type: "line",
+      zoom: {
+        enabled: false,
+      },
+      toolbar: false,
+    },
+    dataLabels: {
+      enabled: false,
+    },
+    stroke: {
+      curve: "smooth",
+      width: 5,
+    },
+    grid: {
+      fill: {
+        colors: ["#6d33ff"],
+        type: "gradient",
+      },
+      row: {
+        colors: ["#f3f3f3", "transparent"],
+        opacity: 0.5,
+      },
+    },
+    xaxis: {
+      categories: datas,
+      labels: {
+        formatter: function (timestamp) {
+          const data = new Date(timestamp);
+          return data.toLocaleString("pt-BR", {
+            day: "2-digit",
+            month: "short",
+          });
+        },
+      },
+    },
+    yaxis: {},
+    fill: {
+      colors: ["#6D33FF"],
+      type: "gradient",
+      gradient: {
+        shade: "dark",
+        gradientToColors: ["#6D33FF"],
+        shadeIntensity: 1,
+        type: "horizontal",
+        opacityFrom: 0.7,
+        opacityTo: 0.9,
+        stops: [0, 100],
+      },
+    },
+  };
+  var chart = new ApexCharts(document.querySelector("#mttr"), configChartMTTR);
+  chart.render();
+};
+
+/**
+ * Tendência de pontuação
+ */
+const tendenciaPontuacao = () => {
+  const opcoesTendencia = {
+    chart: {
+      type: "line",
+      height: 50,
+      sparkline: {
+        enabled: true,
+      },
+      animations: { enabled: true },
+    },
+    series: [
+      {
+        data: [10, 20, 15, 30, 25, 40],
+      },
+    ],
+    colors: [color],
+    stroke: {
+      curve: "smooth",
+      width: 2,
+    },
+    markers: {
+      size: 0,
+    },
+    tooltip: {
+      enabled: false,
+    },
+  };
+
+  const chartTendencia = new ApexCharts(
+    document.querySelector("#tendencia-pontuacao-chart"),
+    opcoesTendencia,
+  );
+  chartTendencia.render();
+};
+
+/**
  * Evento no documento ao cerregar a DOM
+ *
+ * Carrega as funções
  */
 document.addEventListener("DOMContentLoaded", () => {
+  pontuacao();
   uptime();
+  mttr();
+  tendenciaPontuacao();
 });
