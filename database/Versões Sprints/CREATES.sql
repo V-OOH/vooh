@@ -71,6 +71,9 @@ CREATE TABLE empresa (
 	data_hora_atualizacao DATETIME DEFAULT CURRENT_TIMESTAMP
 		ON UPDATE CURRENT_TIMESTAMP, -- Data e hora de atualização
     urlWEBHOOK VARCHAR(255),
+    jiraUrl VARCHAR(255),
+    jiraEmail VARCHAR(100),
+    jiraToken VARCHAR(255),
 	CONSTRAINT fkEnderecoEmpresa
 		FOREIGN KEY (fk_endereco) REFERENCES endereco (id)
 		ON DELETE CASCADE
