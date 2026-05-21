@@ -15,3 +15,16 @@ WHERE d.mac = ?;
 SELECT fk_display, fk_componente, fk_empresa, minimo, maximo 
 FROM componente_display 
 WHERE fk_empresa = ?;
+
+-- Select para Load Alertas
+SELECT d.id AS idDisplay,
+	d.fk_empresa AS fkEmpresa,
+    c.nome AS nome_componente,
+    cd.minimo,
+    cd.maximo
+FROM display d
+LEFT JOIN componente_display cd
+	ON d.id = cd.fk_display
+LEFT JOIN componente c 
+	ON cd.fk_componente = c.id
+WHERE d.mac = "";
