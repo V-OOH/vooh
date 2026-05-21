@@ -84,8 +84,6 @@
     }
 
     .body .kpis #kpi1 .content .pontuacao-container {
-        width: 100px;
-        height: 100px;
         margin-right: 10px;
     }
 
@@ -265,6 +263,310 @@
 
     .body .kpis #kpi4 .info span .val {
         color: var(--color-purple);
+    }
+
+    /*Disponibilidade*/
+    .body .disponibilidade {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 2%;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .body .disponibilidade .disponibilidade-container {
+        width: 90%;
+        padding: -10px;
+        border-radius: 25px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.201);
+        display: flex;
+        justify-content: flex-start;
+        height: 100%;
+        margin-left: 5%;
+    }
+
+    .body .disponibilidade .disponibilidade-container #disponibilidade {
+        display: flex;
+        padding: 5px;
+        height: max-content !important;
+        flex: 1;
+    }
+
+    /*MTTR*/
+    .body .disponibilidade .mttr {
+        display: flex;
+        padding: 16px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.201);
+        border-radius: 25px;
+        height: 100%;
+        align-content: center;
+        flex-direction: column-reverse;
+    }
+
+    .body .disponibilidade .mttr .kpi-eficiencia {
+        margin-top: 20px;
+    }
+
+    .body .disponibilidade .mttr .kpi-eficiencia span {
+        color: var(--color-deep-purple);
+        font-weight: bold;
+        font-size: 12px;
+    }
+
+    .body .disponibilidade .mttr .information {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 10px 0;
+    }
+
+    .body .disponibilidade .mttr .chart-mttr {
+        height: 80%;
+    }
+
+    .body .disponibilidade .mttr .information .big-kpi {
+        font-size: 2rem;
+        color: var(--color-purple);
+        font-weight: bold;
+    }
+
+    .body .disponibilidade .mttr .information .desc-kpi {
+        color: var(--color-success);
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    .body .disponibilidade .mttr .information .desc-kpi div:nth-child(2) {
+        color: var(--color-deep-purple);
+        font-size: 0.8rem;
+        font-weight: normal;
+    }
+
+    .body .disponibilidade .mttr .metas-casos .meta-container {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.201);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 16px;
+        border-radius: 20px;
+    }
+
+    .body .disponibilidade .mttr .metas-casos {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .body .disponibilidade .mttr .metas-casos .meta-container .text {
+        display: flex;
+        flex-direction: column;
+        color: var(--color-deep-purple);
+    }
+
+    .body
+        .disponibilidade
+        .mttr
+        .metas-casos
+        .meta-container
+        .text
+        span:nth-child(1) {
+        color: var(--color-deep-purple);
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+
+    .body .disponibilidade .mttr .metas-casos .mini-kpis {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 10px;
+        margin-top: 10px;
+        column-gap: 10px;
+    }
+
+    .body .disponibilidade .mttr .metas-casos .mini-kpis .mini-card {
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.201);
+        padding: 8px 16px;
+        border-radius: 12px;
+    }
+
+    .body
+        .disponibilidade
+        .mttr
+        .metas-casos
+        .mini-kpis
+        .mini-card:nth-child(1)
+        span:nth-child(1) {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: var(--color-danger);
+        padding: 2px 0;
+    }
+
+    .body
+        .disponibilidade
+        .mttr
+        .metas-casos
+        .mini-kpis
+        .mini-card:nth-child(1)
+        span:nth-child(2) {
+        color: var(--color-deep-purple);
+        font-size: 0.9rem;
+    }
+
+    .body
+        .disponibilidade
+        .mttr
+        .metas-casos
+        .mini-kpis
+        .mini-card:nth-child(1)
+        span:nth-child(3) {
+        color: var(--color-purple);
+        font-weight: bold;
+        font-size: 0.9rem;
+    }
+
+    .body
+        .disponibilidade
+        .mttr
+        .metas-casos
+        .mini-kpis
+        .mini-card:nth-child(2)
+        span:nth-child(1) {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: var(--color-success);
+        padding: 2px 0;
+    }
+
+    .body
+        .disponibilidade
+        .mttr
+        .metas-casos
+        .mini-kpis
+        .mini-card:nth-child(2)
+        span:nth-child(2) {
+        color: var(--color-deep-purple);
+        font-size: 0.9rem;
+    }
+
+    .body
+        .disponibilidade
+        .mttr
+        .metas-casos
+        .mini-kpis
+        .mini-card:nth-child(2)
+        span:nth-child(3) {
+        color: var(--color-purple);
+        font-weight: bold;
+        font-size: 0.9rem;
+    }
+
+    .body .disponibilidade .mttr .metas-casos .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .body .disponibilidade .mttr .metas-casos .incidentes {
+        margin-top: 10px;
+    }
+
+    .body
+        .disponibilidade
+        .mttr
+        .metas-casos
+        .incidentes
+        .title-incidentes
+        span {
+        color: var(--color-deep-purple);
+        font-weight: bold;
+    }
+
+    .body .disponibilidade .mttr .metas-casos .incidentes .cards .card {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.201);
+        padding: 16px;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .body
+        .disponibilidade
+        .mttr
+        .metas-casos
+        .incidentes
+        .cards
+        .card
+        span:nth-child(1) {
+        color: var(--color-deep-purple);
+        font-weight: bold;
+        font-size: 0.8rem;
+    }
+
+    .body
+        .disponibilidade
+        .mttr
+        .metas-casos
+        .incidentes
+        .cards
+        .card:nth-child(1)
+        span:nth-child(2) {
+        color: var(--color-success);
+        font-weight: bold;
+    }
+
+    .body
+        .disponibilidade
+        .mttr
+        .metas-casos
+        .incidentes
+        .cards
+        .card:nth-child(2)
+        span:nth-child(2) {
+        color: var(--color-purple);
+        font-weight: bold;
+    }
+
+    /*Tabela*/
+    .body .tabela {
+        margin-top: 2%;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.201);
+        border-radius: 25px;
+        padding: 16px;
+    }
+
+    .body .tabela .title span {
+        color: var(--color-deep-purple);
+        font-weight: bold;
+    }
+
+    .body .tabela .table-container {
+        width: 100%;
+        overflow: auto;
+    }
+
+    .body .tabela .table-container table {
+        width: 100%;
+    }
+
+    .body .tabela .table-container table tr:nth-child(1) {
+        text-align: left;
+    }
+
+    .body .tabela .table-container table th {
+        color: var(--color-purple);
+        padding: 10px 5px;
+        width: 100%;
+        text-wrap: nowrap;
+    }
+
+    .body .tabela .table-container table td {
+        display: table-cell;
+        vertical-align: middle;
+        text-wrap: nowrap;
+        padding: 10px 5px;
     }
 }
 
@@ -530,6 +832,303 @@
     .body .kpis #kpi4 .info span .val {
         color: var(--color-purple);
     }
+
+    /*Disponibilidade*/
+    .body .disponibilidade {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 2%;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .body .disponibilidade .disponibilidade-container {
+        width: 100%;
+        padding: 5px;
+        border-radius: 25px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.201);
+        display: flex;
+        justify-content: flex-start;
+        height: 100%;
+    }
+
+    .body .disponibilidade .disponibilidade-container #disponibilidade {
+        display: flex;
+        padding: 5px;
+        height: max-content !important;
+        flex: 1;
+    }
+
+    /*MTTR*/
+    .body .disponibilidade .mttr {
+        display: flex;
+        padding: 16px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.201);
+        border-radius: 25px;
+        height: 100%;
+        align-content: center;
+        flex-direction: column-reverse;
+    }
+
+    .body .disponibilidade .mttr .kpi-eficiencia {
+        margin-top: 20px;
+    }
+
+    .body .disponibilidade .mttr .kpi-eficiencia span {
+        color: var(--color-deep-purple);
+        font-weight: bold;
+        font-size: 12px;
+    }
+
+    .body .disponibilidade .mttr .information {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 10px 0;
+    }
+
+    .body .disponibilidade .mttr .chart-mttr {
+        height: 80%;
+    }
+
+    .body .disponibilidade .mttr .information .big-kpi {
+        font-size: 2rem;
+        color: var(--color-purple);
+        font-weight: bold;
+    }
+
+    .body .disponibilidade .mttr .information .desc-kpi {
+        color: var(--color-success);
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    .body .disponibilidade .mttr .information .desc-kpi div:nth-child(2) {
+        color: var(--color-deep-purple);
+        font-size: 0.8rem;
+        font-weight: normal;
+    }
+
+    .body .disponibilidade .mttr .metas-casos .meta-container {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.201);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 16px;
+        border-radius: 20px;
+    }
+
+    .body .disponibilidade .mttr .metas-casos {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .body .disponibilidade .mttr .metas-casos .meta-container .text {
+        display: flex;
+        flex-direction: column;
+        color: var(--color-deep-purple);
+    }
+
+    .body
+        .disponibilidade
+        .mttr
+        .metas-casos
+        .meta-container
+        .text
+        span:nth-child(1) {
+        color: var(--color-deep-purple);
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+
+    .body .disponibilidade .mttr .metas-casos .mini-kpis {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 10px;
+        margin-top: 10px;
+        column-gap: 10px;
+    }
+
+    .body .disponibilidade .mttr .metas-casos .mini-kpis .mini-card {
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.201);
+        padding: 8px 16px;
+        border-radius: 20px;
+    }
+
+    .body
+        .disponibilidade
+        .mttr
+        .metas-casos
+        .mini-kpis
+        .mini-card:nth-child(1)
+        span:nth-child(1) {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: var(--color-danger);
+        padding: 2px 0;
+    }
+
+    .body
+        .disponibilidade
+        .mttr
+        .metas-casos
+        .mini-kpis
+        .mini-card:nth-child(1)
+        span:nth-child(2) {
+        color: var(--color-deep-purple);
+        font-size: 0.9rem;
+    }
+
+    .body
+        .disponibilidade
+        .mttr
+        .metas-casos
+        .mini-kpis
+        .mini-card:nth-child(1)
+        span:nth-child(3) {
+        color: var(--color-purple);
+        font-weight: bold;
+        font-size: 0.9rem;
+    }
+
+    .body
+        .disponibilidade
+        .mttr
+        .metas-casos
+        .mini-kpis
+        .mini-card:nth-child(2)
+        span:nth-child(1) {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: var(--color-success);
+        padding: 2px 0;
+    }
+
+    .body
+        .disponibilidade
+        .mttr
+        .metas-casos
+        .mini-kpis
+        .mini-card:nth-child(2)
+        span:nth-child(2) {
+        color: var(--color-deep-purple);
+        font-size: 0.9rem;
+    }
+
+    .body
+        .disponibilidade
+        .mttr
+        .metas-casos
+        .mini-kpis
+        .mini-card:nth-child(2)
+        span:nth-child(3) {
+        color: var(--color-purple);
+        font-weight: bold;
+        font-size: 0.9rem;
+    }
+
+    .body .disponibilidade .mttr .metas-casos .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .body .disponibilidade .mttr .metas-casos .incidentes {
+        margin-top: 10px;
+    }
+
+    .body
+        .disponibilidade
+        .mttr
+        .metas-casos
+        .incidentes
+        .title-incidentes
+        span {
+        color: var(--color-deep-purple);
+        font-weight: bold;
+    }
+
+    .body .disponibilidade .mttr .metas-casos .incidentes .cards .card {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.201);
+        padding: 16px;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .body
+        .disponibilidade
+        .mttr
+        .metas-casos
+        .incidentes
+        .cards
+        .card
+        span:nth-child(1) {
+        color: var(--color-deep-purple);
+        font-weight: bold;
+        font-size: 0.8rem;
+    }
+
+    .body
+        .disponibilidade
+        .mttr
+        .metas-casos
+        .incidentes
+        .cards
+        .card:nth-child(1)
+        span:nth-child(2) {
+        color: var(--color-success);
+        font-weight: bold;
+    }
+
+    .body
+        .disponibilidade
+        .mttr
+        .metas-casos
+        .incidentes
+        .cards
+        .card:nth-child(2)
+        span:nth-child(2) {
+        color: var(--color-purple);
+        font-weight: bold;
+    }
+
+    /*Tabela*/
+    .body .tabela {
+        margin-top: 2%;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.201);
+        border-radius: 25px;
+        padding: 16px;
+    }
+
+    .body .tabela .title span {
+        color: var(--color-deep-purple);
+        font-weight: bold;
+    }
+
+    .body .tabela .table-container {
+        width: 100%;
+    }
+
+    .body .tabela .table-container table {
+        width: 100%;
+        display: block;
+        overflow: auto;
+    }
+
+    .body .tabela .table-container table tr:nth-child(1) {
+        text-align: left;
+    }
+
+    .body .tabela .table-container table th {
+        color: var(--color-purple);
+        padding: 10px 0;
+        width: 100%;
+        text-wrap: nowrap;
+    }
 }
 
 /*Estilos para telas com tamanho mínimo de 768px até 1023px de largura (>= 30rem e <= 63.9rem)*/
@@ -788,6 +1387,301 @@
 
     .body .kpis #kpi4 .info span .val {
         color: var(--color-purple);
+    }
+
+    /*Disponibilidade*/
+    .body .disponibilidade {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 2%;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .body .disponibilidade .disponibilidade-container {
+        width: 100%;
+        padding: 5px;
+        border-radius: 25px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.201);
+        display: flex;
+        justify-content: flex-start;
+        height: 100%;
+    }
+
+    .body .disponibilidade .disponibilidade-container #disponibilidade {
+        display: flex;
+        padding: 5px;
+        height: max-content !important;
+        flex: 1;
+    }
+
+    /*MTTR*/
+    .body .disponibilidade .mttr {
+        display: flex;
+        padding: 16px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.201);
+        border-radius: 25px;
+        height: 100%;
+        align-content: center;
+        flex-direction: column-reverse;
+    }
+
+    .body .disponibilidade .mttr .kpi-eficiencia {
+        margin-top: 20px;
+    }
+
+    .body .disponibilidade .mttr .kpi-eficiencia span {
+        color: var(--color-deep-purple);
+        font-weight: bold;
+        font-size: 12px;
+    }
+
+    .body .disponibilidade .mttr .information {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 10px 0;
+    }
+
+    .body .disponibilidade .mttr .chart-mttr {
+        height: 80%;
+    }
+
+    .body .disponibilidade .mttr .information .big-kpi {
+        font-size: 2rem;
+        color: var(--color-purple);
+        font-weight: bold;
+    }
+
+    .body .disponibilidade .mttr .information .desc-kpi {
+        color: var(--color-success);
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    .body .disponibilidade .mttr .information .desc-kpi div:nth-child(2) {
+        color: var(--color-deep-purple);
+        font-size: 0.8rem;
+        font-weight: normal;
+    }
+
+    .body .disponibilidade .mttr .metas-casos .meta-container {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.201);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 16px;
+        border-radius: 20px;
+    }
+
+    .body .disponibilidade .mttr .metas-casos {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .body .disponibilidade .mttr .metas-casos .meta-container .text {
+        display: flex;
+        flex-direction: column;
+        color: var(--color-deep-purple);
+    }
+
+    .body
+        .disponibilidade
+        .mttr
+        .metas-casos
+        .meta-container
+        .text
+        span:nth-child(1) {
+        color: var(--color-deep-purple);
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+
+    .body .disponibilidade .mttr .metas-casos .mini-kpis {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 10px;
+        margin-top: 10px;
+        column-gap: 10px;
+    }
+
+    .body .disponibilidade .mttr .metas-casos .mini-kpis .mini-card {
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.201);
+        padding: 8px 16px;
+        border-radius: 12px;
+    }
+
+    .body
+        .disponibilidade
+        .mttr
+        .metas-casos
+        .mini-kpis
+        .mini-card:nth-child(1)
+        span:nth-child(1) {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: var(--color-danger);
+        padding: 2px 0;
+    }
+
+    .body
+        .disponibilidade
+        .mttr
+        .metas-casos
+        .mini-kpis
+        .mini-card:nth-child(1)
+        span:nth-child(2) {
+        color: var(--color-deep-purple);
+        font-size: 0.9rem;
+    }
+
+    .body
+        .disponibilidade
+        .mttr
+        .metas-casos
+        .mini-kpis
+        .mini-card:nth-child(1)
+        span:nth-child(3) {
+        color: var(--color-purple);
+        font-weight: bold;
+        font-size: 0.9rem;
+    }
+
+    .body
+        .disponibilidade
+        .mttr
+        .metas-casos
+        .mini-kpis
+        .mini-card:nth-child(2)
+        span:nth-child(1) {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: var(--color-success);
+        padding: 2px 0;
+    }
+
+    .body
+        .disponibilidade
+        .mttr
+        .metas-casos
+        .mini-kpis
+        .mini-card:nth-child(2)
+        span:nth-child(2) {
+        color: var(--color-deep-purple);
+        font-size: 0.9rem;
+    }
+
+    .body
+        .disponibilidade
+        .mttr
+        .metas-casos
+        .mini-kpis
+        .mini-card:nth-child(2)
+        span:nth-child(3) {
+        color: var(--color-purple);
+        font-weight: bold;
+        font-size: 0.9rem;
+    }
+
+    .body .disponibilidade .mttr .metas-casos .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .body .disponibilidade .mttr .metas-casos .incidentes {
+        margin-top: 10px;
+    }
+
+    .body
+        .disponibilidade
+        .mttr
+        .metas-casos
+        .incidentes
+        .title-incidentes
+        span {
+        color: var(--color-deep-purple);
+        font-weight: bold;
+    }
+
+    .body .disponibilidade .mttr .metas-casos .incidentes .cards .card {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.201);
+        padding: 16px;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .body
+        .disponibilidade
+        .mttr
+        .metas-casos
+        .incidentes
+        .cards
+        .card
+        span:nth-child(1) {
+        color: var(--color-deep-purple);
+        font-weight: bold;
+        font-size: 0.8rem;
+    }
+
+    .body
+        .disponibilidade
+        .mttr
+        .metas-casos
+        .incidentes
+        .cards
+        .card:nth-child(1)
+        span:nth-child(2) {
+        color: var(--color-success);
+        font-weight: bold;
+    }
+
+    .body
+        .disponibilidade
+        .mttr
+        .metas-casos
+        .incidentes
+        .cards
+        .card:nth-child(2)
+        span:nth-child(2) {
+        color: var(--color-purple);
+        font-weight: bold;
+    }
+
+    /*Tabela*/
+    .body .tabela {
+        margin-top: 2%;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.201);
+        border-radius: 25px;
+        padding: 16px;
+    }
+
+    .body .tabela .title span {
+        color: var(--color-deep-purple);
+        font-weight: bold;
+    }
+
+    .body .tabela .table-container {
+        width: 100%;
+    }
+
+    .body .tabela .table-container table {
+        width: 100%;
+        display: block;
+        overflow: auto;
+    }
+
+    .body .tabela .table-container table tr:nth-child(1) {
+        text-align: left;
+    }
+
+    .body .tabela .table-container table th {
+        color: var(--color-purple);
+        padding: 10px 0;
     }
 }
 

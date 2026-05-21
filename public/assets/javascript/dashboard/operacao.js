@@ -152,7 +152,7 @@ const uptime = () => {
       text: "Evolução da disponibilidade (últimos 30 dias)",
       align: "left",
       style: {
-        fontSize: "16px",
+        fontSize: "18px",
         color: "#1e0b36",
       },
     },
